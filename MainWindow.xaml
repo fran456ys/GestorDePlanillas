@@ -4,9 +4,27 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GestorDePlanillas"
+        xmlns:ui="http://schemas.modernwpf.com/2019"
+        ui:WindowHelper.UseModernWindowStyle="True"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Gestor de Planillas" Height="1080" Width="1920">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        
 
+        <GridSplitter Grid.Column="1" VerticalAlignment="Stretch" ResizeDirection="Columns"
+                      Width="5" HorizontalAlignment="Center"/>
+
+        <Rectangle Fill="Blue" Grid.Column="2"/>
+
+        <StackPanel Margin="12" >
+            <TextBlock Text="My first ModernWPF app"  />
+            <Button Content="I am a button" />
+            <Button Content="I am an accent button" />
+        </StackPanel>
     </Grid>
 </Window>
