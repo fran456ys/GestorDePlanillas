@@ -10,7 +10,7 @@
         Title="Gestor de Planillas" Height="1080" Width="1920">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="5" />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
@@ -23,8 +23,8 @@
 
         <StackPanel Margin="12" >
             <TextBlock Text="My first ModernWPF app"  />
-            <Button Content="I am a button" />
-            <Button Content="I am an accent button" />
+            <Button Content="Cargar Ternero" Style="{StaticResource SidebarButton}" />
+            <Button Content="Importador de Terneros" Style="{StaticResource SidebarButton}"/>
         </StackPanel>
     </Grid>
 </Window>

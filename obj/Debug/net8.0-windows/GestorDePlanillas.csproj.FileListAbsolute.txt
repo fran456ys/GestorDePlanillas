@@ -152,3 +152,4 @@ D:\C# projects\GestorDePlanillas\bin\Debug\net8.0-windows\vi-VN\ModernWpf.resour
 D:\C# projects\GestorDePlanillas\obj\Debug\net8.0-windows\GestorDePlanillas.csproj.AssemblyReference.cache
 D:\C# projects\GestorDePlanillas\obj\Debug\net8.0-windows\App.baml
 D:\C# projects\GestorDePlanillas\obj\Debug\net8.0-windows\GestorDe.FB7D14D4.Up2Date
+D:\C# projects\GestorDePlanillas\obj\Debug\net8.0-windows\Styles\Button.baml
