@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "dQhG76i0vvE=",
+  "dgSpecHash": "LZVSMQmpIk8=",
   "success": true,
-  "projectFilePath": "D:\\C# projects\\GestorDePlanillas\\GestorDePlanillas.csproj",
+  "projectFilePath": "C:\\Users\\franc\\Downloads\\GestorDePlanillas\\GestorDePlanillas.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\fran\\.nuget\\packages\\modernwpfui\\0.9.6\\modernwpfui.0.9.6.nupkg.sha512"
+    "C:\\Users\\franc\\.nuget\\packages\\modernwpfui\\0.9.6\\modernwpfui.0.9.6.nupkg.sha512"
   ],
   "logs": []
 }

@@ -9,11 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Views\" />
+    <None Remove="Assets\fotoTernero.ico" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="ModernWpfUI" Version="0.9.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\fotoTernero.ico" />
   </ItemGroup>
 
 </Project>

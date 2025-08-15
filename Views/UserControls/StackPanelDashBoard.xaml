@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="GestorDePlanillas.Views.UserControls.StackPanelDashBoard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GestorDePlanillas.Views.UserControls"
+             mc:Ignorable="d" 
+             Height="1080" d:DesignWidth="200">
+
+    <Grid Background="#1E1E1E" Margin="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Título y botones -->
+            <RowDefinition Height="*"/>
+            <!-- Espacio flexible -->
+            <RowDefinition Height="Auto"/>
+            <!-- Barra de progreso -->
+        </Grid.RowDefinitions>
+
+        <!-- Botones -->
+        <StackPanel Grid.Row="0" Margin="12">
+            <Button Content="Cargar Ternero" Style="{StaticResource SidebarButton}" />
+            <Button Content="Importar Excel" Style="{StaticResource SidebarButton}" />
+            <Button Content="Reportes" Style="{StaticResource SidebarButton}" />
+
+            <ProgressBar Grid.Row="2" 
+                     Margin="0,0,0,30"
+                     Height="8"
+                     Minimum="0" Maximum="100"
+                     Value="100"
+                     Foreground="#3B82F6"
+                     Background="#2D2D2D"
+                     BorderBrush="{x:Null}"/>
+            
+            <Button Content="Configuración" Style="{StaticResource SidebarButton}" />
+
+        </StackPanel>
+
+        <!-- Barra de progreso -->
+
+        
+        
+    </Grid>
+</UserControl>

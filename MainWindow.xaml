@@ -5,26 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GestorDePlanillas"
         xmlns:ui="http://schemas.modernwpf.com/2019"
+        xmlns:UserControls="clr-namespace:GestorDePlanillas.Views.UserControls"
         ui:WindowHelper.UseModernWindowStyle="True"
         mc:Ignorable="d"
-        Title="Gestor de Planillas" Height="1080" Width="1920">
+        Title="Gestor de Planillas" Height="1080" Width="1920"
+        Icon="/Assets/fotoTernero.ico">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="4" />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         
 
         <GridSplitter Grid.Column="1" VerticalAlignment="Stretch" ResizeDirection="Columns"
-                      Width="5" HorizontalAlignment="Center"/>
+                      Width="5" HorizontalAlignment="Center" Background="Black"/>
 
-        <Rectangle Fill="Blue" Grid.Column="2"/>
+        <Rectangle Fill="White" Grid.Column="2"/>
 
-        <StackPanel Margin="12" >
-            <TextBlock Text="My first ModernWPF app"  />
-            <Button Content="Cargar Ternero" Style="{StaticResource SidebarButton}" />
-            <Button Content="Importador de Terneros" Style="{StaticResource SidebarButton}"/>
-        </StackPanel>
+        <UserControls:StackPanelDashBoard>
+        </UserControls:StackPanelDashBoard>
     </Grid>
 </Window>
