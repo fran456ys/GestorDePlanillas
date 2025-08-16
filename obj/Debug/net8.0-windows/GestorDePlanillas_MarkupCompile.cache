@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\Users\franc\Downloads\GestorDePlanillas\App.xaml
-5-1945253236
+8-582455689
 
-91441064555
+122133806414
 200-1052052537
-MainWindow.xaml;Styles\Button.xaml;Styles\Dictionary1.xaml;Views\UserControls\StackPanelDashBoard.xaml;Views\Windows\ImportadorWindow.xaml;
+MainWindow.xaml;Styles\Button.xaml;Styles\Dictionary1.xaml;Views\UserControls\GridTerneros.xaml;Views\UserControls\ImportarExcel.xaml;Views\UserControls\PlaceHolderTextBox.xaml;Views\UserControls\StackPanelDashBoard.xaml;Views\Windows\ImportadorWindow.xaml;
 
 False
 

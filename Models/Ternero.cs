@@ -21,5 +21,31 @@
 
         public string fotoIzquierda { get; set; }
         public string fotoDerecha { get; set; }
+
+        public Ternero(string nombre, string rp, string rDeControl, string raza, string hba, string chapa, 
+            string color, string fechaNac, string tambo, string padreRP, string padreHBA, string nombrePadre, string madreRP, 
+            string madreHBA, string madreCAL, string nombreMadre, string fotoIzquierda, string fotoDerecha)
+        {
+            this.nombre = nombre;
+            this.rp = rp;
+            this.rDeControl = rDeControl;
+            this.raza = raza;
+            this.hba = hba;
+            this.chapa = chapa;
+            this.color = color;
+            this.fechaNac = fechaNac;
+            this.tambo = tambo;
+            this.padreRP = padreRP;
+            this.padreHBA = padreHBA;
+            this.nombrePadre = nombrePadre;
+            this.madreRP = madreRP;
+            this.madreHBA = madreHBA;
+            this.madreCAL = madreCAL;
+            this.nombreMadre = nombreMadre;
+            this.fotoIzquierda = fotoIzquierda;
+            this.fotoDerecha = fotoDerecha;
+        }
+
+
     }
 }
