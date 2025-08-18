@@ -1,8 +1,22 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Paleta de colores definida -->
+    <SolidColorBrush x:Key="PrimaryDark" Color="#333446"/>
+    <!-- Gris oscuro azulado -->
+    <SolidColorBrush x:Key="Secondary" Color="#7F8CAA"/>
+    <!-- Gris medio azulado -->
+    <SolidColorBrush x:Key="Accent" Color="#B8CFCE"/>
+    <!-- Verde grisáceo claro -->
+    <SolidColorBrush x:Key="Background" Color="#EAEFEF"/>
+    <!-- Gris muy claro -->
+    <SolidColorBrush x:Key="White" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="Text" Color="#333446"/>
+
+    <!-- Estilo para botones del sidebar -->
     <Style x:Key="SidebarButton" TargetType="Button">
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="Foreground" Value="#CCCCCC"/>
+        <Setter Property="Foreground" Value="{StaticResource Background}"/>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="Padding" Value="20,12"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
@@ -17,7 +31,8 @@
                             Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
-                            Padding="{TemplateBinding Padding}">
+                            Padding="{TemplateBinding Padding}"
+                            CornerRadius="6">
                         <ContentPresenter x:Name="contentPresenter"
                                         HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                         VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
@@ -27,15 +42,128 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="border" Property="Background" Value="#0052C1"/>
-                            <Setter Property="Foreground" Value="White"/>
+                            <Setter TargetName="border" Property="Background" Value="{StaticResource Secondary}"/>
+                            <Setter Property="Foreground" Value="{StaticResource White}"/>
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
-                            <Setter TargetName="border" Property="Background" Value="#357ABD"/>
+                            <Setter TargetName="border" Property="Background" Value="{StaticResource Accent}"/>
+                            <Setter Property="Foreground" Value="{StaticResource PrimaryDark}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
+
+    <!-- Estilo para botones principales/acciones -->
+    <Style x:Key="StackButton" TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource PrimaryDark}"/>
+        <Setter Property="Foreground" Value="{StaticResource White}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource PrimaryDark}"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Padding" Value="20,12"/>
+        <Setter Property="Margin" Value="0,5"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontWeight" Value="Medium"/>
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Cursor" Value="Hand"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" 
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="8"
+                        SnapsToDevicePixels="True">
+                        <ContentPresenter x:Name="contentPresenter" 
+                                    Focusable="False" 
+                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                    Margin="{TemplateBinding Padding}" 
+                                    RecognizesAccessKey="True" 
+                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" 
+                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <!-- Hover Effect -->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" TargetName="border" Value="{StaticResource Secondary}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Secondary}"/>
+                        </Trigger>
+                        <!-- Pressed Effect -->
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" TargetName="border" Value="{StaticResource Accent}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Accent}"/>
+                            <Setter Property="Foreground" Value="{StaticResource PrimaryDark}"/>
+                        </Trigger>
+                        <!-- Disabled Effect -->
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" TargetName="border" Value="{StaticResource Secondary}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Secondary}"/>
+                            <Setter Property="Foreground" Value="{StaticResource Background}"/>
+                            <Setter Property="Cursor" Value="Arrow"/>
+                            <Setter Property="Opacity" Value="0.6"/>
+                        </Trigger>
+                        <!-- Focus Effect -->
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Accent}"/>
+                            <Setter Property="BorderThickness" TargetName="border" Value="2"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Estilo para botones secundarios -->
+    <Style x:Key="SecondaryButton" TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource White}"/>
+        <Setter Property="Foreground" Value="{StaticResource PrimaryDark}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource Secondary}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Padding" Value="20,12"/>
+        <Setter Property="Margin" Value="0,5"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontWeight" Value="Medium"/>
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Cursor" Value="Hand"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" 
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="8"
+                        SnapsToDevicePixels="True">
+                        <ContentPresenter x:Name="contentPresenter" 
+                                    Focusable="False" 
+                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                    Margin="{TemplateBinding Padding}" 
+                                    RecognizesAccessKey="True" 
+                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" 
+                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" TargetName="border" Value="{StaticResource Accent}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Accent}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" TargetName="border" Value="{StaticResource Secondary}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Secondary}"/>
+                            <Setter Property="Foreground" Value="{StaticResource White}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
 </ResourceDictionary>

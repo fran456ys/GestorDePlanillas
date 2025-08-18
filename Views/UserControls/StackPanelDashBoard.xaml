@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              Height="1080" d:DesignWidth="200">
 
-    <Grid Background="#1E1E1E" Margin="0">
+    <Grid Background="#333446" Margin="0">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <!-- Título y botones -->
@@ -19,9 +19,9 @@
 
         <!-- Botones -->
         <StackPanel Grid.Row="0" Margin="12">
-            <Button Content="Cargar Ternero" Style="{StaticResource SidebarButton}" />
-            <Button Content="Importar Excel" Style="{StaticResource SidebarButton}" />
-            <Button Content="Reportes" Style="{StaticResource SidebarButton}" />
+            <Button x:Name="btnCargarTernero" Content="Cargar Ternero" Style="{StaticResource SidebarButton}" Click="btnCargarTernero_Click"/>
+            <Button x:Name="btnImportarExcel" Content="Importar Excel" Style="{StaticResource SidebarButton}" Click="btnImportarExcel_Click"/>
+            <Button x:Name="btnReportes" Content="Reportes" Style="{StaticResource SidebarButton}" Click="btnReportes_Click"/>
 
             <ProgressBar Grid.Row="2" 
                      Margin="0,0,0,30"

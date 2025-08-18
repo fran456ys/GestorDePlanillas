@@ -320,3 +320,5 @@ C:\Users\franc\Downloads\GestorDePlanillas\obj\Debug\net8.0-windows\Views\UserCo
 C:\Users\franc\Downloads\GestorDePlanillas\obj\Debug\net8.0-windows\Views\UserControls\PlaceHolderTextBox.baml
 C:\Users\franc\Downloads\GestorDePlanillas\obj\Debug\net8.0-windows\Views\UserControls\GridTerneros.g.cs
 C:\Users\franc\Downloads\GestorDePlanillas\obj\Debug\net8.0-windows\Views\UserControls\GridTerneros.baml
+C:\Users\franc\Downloads\GestorDePlanillas\obj\Debug\net8.0-windows\Views\UserControls\CargarTerneroView.g.cs
+C:\Users\franc\Downloads\GestorDePlanillas\obj\Debug\net8.0-windows\Views\UserControls\CargarTerneroView.baml

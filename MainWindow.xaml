@@ -10,7 +10,7 @@
         mc:Ignorable="d"
         Title="Gestor de Planillas" Height="1080" Width="1920"
         Icon="/Assets/fotoTernero.ico">
-    <Grid>
+    <Grid Background="#EAEFEF">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="4" />
@@ -18,30 +18,15 @@
         </Grid.ColumnDefinitions>
 
 
-        <UserControls:StackPanelDashBoard>
-        </UserControls:StackPanelDashBoard>
-        
+        <UserControls:StackPanelDashBoard ImportarExcelClick="StackPanelDashBoard_ImportarExcelClick" CargarTerneroClick="StackPanelDashBoard_CargarTerneroClick"
+                                          ReportesClick="StackPanelDashBoard_ReportesClick"/>
+
         <GridSplitter Grid.Column="1" VerticalAlignment="Stretch" ResizeDirection="Columns"
-                      Width="5" HorizontalAlignment="Center" Background="Black"/>
+                      Width="5" HorizontalAlignment="Center" Background="#7F8CAA"/>
 
-        <Rectangle Fill="White" Grid.Column="2"/>
+        <Rectangle Fill="#EAEFEF" Grid.Column="2"/>
 
-        <Grid Grid.Column="2" Margin="10">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
+        <ContentControl x:Name="MainContent" Grid.Column="2"/>
 
-                <UserControls:PlaceHolderTextBox Grid.Column="1" Width="800" x:Name="tbImportador"/>
-            </Grid>
-            <DataGrid x:Name="dgTerneros" Grid.Row="1" Grid.ColumnSpan="2" Margin="10"
-              AutoGenerateColumns="True" IsReadOnly="True" Background="#F3F4F6"/>
-        </Grid>
-        
     </Grid>
 </Window>
