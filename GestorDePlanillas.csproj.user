@@ -8,16 +8,19 @@
     <Compile Update="Views\UserControls\GridTerneros.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\UserControls\ImportarExcel.xaml.cs">
+    <Compile Update="Views\UserControls\ImportarExcelView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\UserControls\PlaceHolderTextBox.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\UserControls\ReportesView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\UserControls\StackPanelDashBoard.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\Windows\ImportadorWindow.xaml.cs">
+    <Compile Update="Views\Windows\PlanillaWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

@@ -8,7 +8,7 @@
         xmlns:UserControls="clr-namespace:GestorDePlanillas.Views.UserControls"
         ui:WindowHelper.UseModernWindowStyle="True"
         mc:Ignorable="d"
-        Title="Gestor de Planillas" Height="1080" Width="1920"
+        Title="Gestor de Planillas" Height="720" Width="1280"
         Icon="/Assets/fotoTernero.ico">
     <Grid Background="#EAEFEF">
         <Grid.ColumnDefinitions>
@@ -26,7 +26,9 @@
 
         <Rectangle Fill="#EAEFEF" Grid.Column="2"/>
 
-        <ContentControl x:Name="MainContent" Grid.Column="2"/>
+        <ContentControl x:Name="MainContent" Grid.Column="2">
+            <UserControls:ImportarExcelView />
+        </ContentControl>
 
     </Grid>
 </Window>

@@ -42,7 +42,7 @@ namespace GestorDePlanillas.Views.UserControls
         {
             OpenFileDialog fileDialog = new OpenFileDialog()
             {
-                Filter = "Archivos xlsx (*.xlsx)|*.xlsx|Archivos CSV (*.csv)|*.csv|Todos los archivos (*.*)|*.*"
+                Filter = "Archivos CSV (*.csv)|*.csv|Archivos xlsx (*.xlsx)|*.xlsx|Todos los archivos (*.*)|*.*"
             };
 
             bool? success = fileDialog.ShowDialog();
