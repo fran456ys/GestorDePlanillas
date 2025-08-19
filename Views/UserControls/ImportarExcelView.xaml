@@ -16,14 +16,30 @@
 
         <UserControls:PlaceHolderTextBox Width="800" x:Name="tbImportador" HorizontalAlignment="Left"/>
 
-        <DataGrid x:Name="dgTerneros" Grid.Row="1" Width="1300" HorizontalAlignment="Left"
-                  AutoGenerateColumns="True" IsReadOnly="True" Background="White" AutoGeneratingColumn="dgTerneros_AutoGeneratingColumn"
-                  HorizontalGridLinesBrush="#B8CFCE" />
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="330"/>
+            </Grid.ColumnDefinitions>
 
-        <ui:SimpleStackPanel Grid.Row="1" HorizontalAlignment="Right" Width="300" Margin="35">
-            <Button x:Name="btnVisualizar" Style="{StaticResource StackButton}" Content="Visualizar Planilla" Click="btnVisualizar_Click"/>
-            <Button Style="{StaticResource StackButton}" Content="Descargar Planillas"/>
-            <Button x:Name="btnImprimir" Style="{StaticResource StackButton}" Content="Imprimir Planillas" Click="btnImprimir_Click"/>
-        </ui:SimpleStackPanel>
+            <DataGrid x:Name="dgTerneros" 
+          Grid.Row="1" Grid.Column="0"
+          AutoGenerateColumns="True" 
+          IsReadOnly="True" 
+          Background="White"
+          HorizontalAlignment="Stretch" 
+          VerticalAlignment="Stretch"
+          AutoGeneratingColumn="dgTerneros_AutoGeneratingColumn" 
+          HorizontalGridLinesBrush="#B8CFCE"
+          ScrollViewer.HorizontalScrollBarVisibility="Visible"
+          ScrollViewer.VerticalScrollBarVisibility="Visible"/>
+
+
+            <ui:SimpleStackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Width="300" Margin="15">
+                <Button x:Name="btnVisualizar" Style="{StaticResource StackButton}" Content="Visualizar Planilla" Click="btnVisualizar_Click"/>
+                <Button Style="{StaticResource StackButton}" Content="Descargar Planillas"/>
+                <Button x:Name="btnImprimir" Style="{StaticResource StackButton}" Content="Imprimir Planillas" Click="btnImprimir_Click"/>
+            </ui:SimpleStackPanel>
+        </Grid>
     </Grid>
 </UserControl>

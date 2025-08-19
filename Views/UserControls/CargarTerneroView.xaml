@@ -7,7 +7,235 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="White">
-        <TextBlock Text="Pantalla de Cargar Ternero" FontSize="20"
-                   VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border Background="White" CornerRadius="15" Padding="30,25" Margin="30">
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="8" BlurRadius="25" Opacity="0.2"/>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Registro de Terneros" FontSize="28" FontWeight="Bold" 
+                           Margin="0,0,0,8" HorizontalAlignment="Center"/>
+                <TextBlock Text="Complete los datos del nuevo ternero en el sistema" 
+                           FontSize="16" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </Border>
+
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <Border Background="White" CornerRadius="15" Padding="35">
+                <Border.Effect>
+                    <DropShadowEffect ShadowDepth="10" BlurRadius="30" Opacity="0.2"/>
+                </Border.Effect>
+
+                <StackPanel>
+                    <!-- Información General -->
+                    <StackPanel Margin="0,0,0,35">
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                            <Border Background="#FF3498DB" Width="24" Height="24" CornerRadius="6" Margin="0,0,10,0">
+                                <TextBlock Text="🐄" FontSize="12" HorizontalAlignment="Center" 
+                                             VerticalAlignment="Center" Foreground="White"/>
+                            </Border>
+                            <TextBlock Text="Información General" FontSize="20" FontWeight="SemiBold" 
+                                          VerticalAlignment="Center"/>
+                        </StackPanel>
+
+                        <UniformGrid Columns="3" Margin="0,0,0,20">
+                            <StackPanel Margin="0,0,20,20">
+                                <TextBlock Text="Nombre del Ternero" FontWeight="Medium"  
+                                             FontSize="14" Margin="0,0,0,8"/>
+                                <TextBox x:Name="TxtNombre" />
+                            </StackPanel>
+
+                            <StackPanel Margin="0,0,20,20">
+                                <TextBlock Text="RP (Registro Provincial)" FontWeight="Medium"  
+                                             FontSize="14" Margin="0,0,0,8"/>
+                                <TextBox x:Name="TxtRP" />
+                            </StackPanel>
+
+                            <StackPanel Margin="0,0,0,20">
+                                <TextBlock Text="R de Control" FontWeight="Medium"  
+                                             FontSize="14" Margin="0,0,0,8"/>
+                                <TextBox x:Name="TxtRDeControl" />
+                            </StackPanel>
+                        </UniformGrid>
+
+                        <UniformGrid Columns="3" Margin="0,0,0,20">
+                            <StackPanel Margin="0,0,20,20">
+                                <TextBlock Text="Raza" FontWeight="Medium"  
+                                             FontSize="14" Margin="0,0,0,8"/>
+                                <ComboBox x:Name="CmbRaza" >
+                                    <ComboBoxItem Content="Holando"/>
+                                </ComboBox>
+                            </StackPanel>
+
+                            <StackPanel Margin="0,0,20,20">
+                                <TextBlock Text="HBA" FontWeight="Medium" FontSize="14" Margin="0,0,0,8"/>
+                                <TextBox x:Name="TxtHBA" />
+                            </StackPanel>
+
+                            <StackPanel Margin="0,0,0,20">
+                                <TextBlock Text="Chapa" FontWeight="Medium" FontSize="14" Margin="0,0,0,8"/>
+                                <TextBox x:Name="TxtChapa" />
+                            </StackPanel>
+                        </UniformGrid>
+
+                        <UniformGrid Columns="3">
+                            <StackPanel Margin="0,0,20,0">
+                                <TextBlock Text="Color" FontWeight="Medium"  
+                                             FontSize="14" Margin="0,0,0,8"/>
+                                <ComboBox x:Name="CmbColor" >
+                                    <ComboBoxItem Content="Overo Negro"/>
+                                    <ComboBoxItem Content="Overo Colorado"/>
+                                </ComboBox>
+                            </StackPanel>
+
+                            <StackPanel Margin="0,0,20,0">
+                                <TextBlock Text="Fecha de Nacimiento" FontWeight="Medium"  
+                                             FontSize="14" Margin="0,0,0,8"/>
+                                <DatePicker x:Name="DpFechaNac" />
+                            </StackPanel>
+
+                            <StackPanel>
+                                <TextBlock Text="Tambo" FontWeight="Medium"  
+                                             FontSize="14" Margin="0,0,0,8"/>
+                                <TextBox x:Name="TxtTambo" />
+                            </StackPanel>
+                        </UniformGrid>
+                    </StackPanel>
+
+                    <!-- Información del Padre -->
+                    <StackPanel Margin="0,0,0,35">
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                            <Border Background="#FF3498DB" Width="24" Height="24" CornerRadius="6" Margin="0,0,10,0">
+                                <TextBlock Text="👨" FontSize="12" HorizontalAlignment="Center" 
+                                             VerticalAlignment="Center" Foreground="White"/>
+                            </Border>
+                            <TextBlock Text="Información del Padre" FontSize="20" FontWeight="SemiBold" 
+                                       VerticalAlignment="Center"/>
+                        </StackPanel>
+
+                        <UniformGrid Columns="3">
+                            <StackPanel Margin="0,0,20,0">
+                                <TextBlock Text="Nombre del Padre" FontWeight="Medium"  
+                                             FontSize="14" Margin="0,0,0,8"/>
+                                <TextBox x:Name="TxtNombrePadre" />
+                            </StackPanel>
+
+                            <StackPanel Margin="0,0,20,0">
+                                <TextBlock Text="RP del Padre" FontWeight="Medium"  
+                                             FontSize="14" Margin="0,0,0,8"/>
+                                <TextBox x:Name="TxtPadreRP" />
+                            </StackPanel>
+
+                            <StackPanel>
+                                <TextBlock Text="HBA del Padre" FontWeight="Medium"  
+                                             FontSize="14" Margin="0,0,0,8"/>
+                                <TextBox x:Name="TxtPadreHBA" />
+                            </StackPanel>
+                        </UniformGrid>
+                    </StackPanel>
+
+                    <!-- Información de la Madre -->
+                    <StackPanel Margin="0,0,0,35">
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                            <Border Background="#FF3498DB" Width="24" Height="24" CornerRadius="6" Margin="0,0,10,0">
+                                <TextBlock Text="👩" FontSize="12" HorizontalAlignment="Center" 
+                                             VerticalAlignment="Center" Foreground="White"/>
+                            </Border>
+                            <TextBlock Text="Información de la Madre" FontSize="20" FontWeight="SemiBold" 
+                                         VerticalAlignment="Center"/>
+                        </StackPanel>
+
+                        <UniformGrid Columns="2" Margin="0,0,0,20">
+                            <StackPanel Margin="0,0,20,20">
+                                <TextBlock Text="Nombre de la Madre" FontWeight="Medium"  
+                                             FontSize="14" Margin="0,0,0,8"/>
+                                <TextBox x:Name="TxtNombreMadre" />
+                            </StackPanel>
+
+                            <StackPanel Margin="0,0,0,20">
+                                <TextBlock Text="RP de la Madre" FontWeight="Medium"  
+                                             FontSize="14" Margin="0,0,0,8"/>
+                                <TextBox x:Name="TxtMadreRP" />
+                            </StackPanel>
+                        </UniformGrid>
+
+                        <UniformGrid Columns="2">
+                            <StackPanel Margin="0,0,20,0">
+                                <TextBlock Text="HBA de la Madre" FontWeight="Medium"  
+                                             FontSize="14" Margin="0,0,0,8"/>
+                                <TextBox x:Name="TxtMadreHBA" />
+                            </StackPanel>
+
+                            <StackPanel>
+                                <TextBlock Text="CAL de la Madre" FontWeight="Medium"  
+                                             FontSize="14" Margin="0,0,0,8"/>
+                                <TextBox x:Name="TxtMadreCAL" />
+                            </StackPanel>
+                        </UniformGrid>
+                    </StackPanel>
+
+                    <!-- Fotografías -->
+                    <StackPanel Margin="0,0,0,40">
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                            <Border Background="#FF3498DB" Width="24" Height="24" CornerRadius="6" Margin="0,0,10,0">
+                                <TextBlock Text="📷" FontSize="12" HorizontalAlignment="Center" 
+                                             VerticalAlignment="Center" Foreground="White"/>
+                            </Border>
+                            <TextBlock Text="Fotografías" FontSize="20" FontWeight="SemiBold" 
+                                         VerticalAlignment="Center"/>
+                        </StackPanel>
+
+                        <UniformGrid Columns="2">
+                            <Border Margin="0,0,25,0" Background="#FFF8F9FA" BorderBrush="#FFBDC3C7" 
+                                        BorderThickness="2" CornerRadius="12" Height="150"
+                                        x:Name="BorderFotoIzquierda">
+                                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <Border Background="#FF3498DB" Width="50" Height="50" CornerRadius="25" 
+                                                Margin="0,0,0,15">
+                                        <TextBlock Text="📷" FontSize="20" HorizontalAlignment="Center" 
+                                                     VerticalAlignment="Center" Foreground="White"/>
+                                    </Border>
+                                    <TextBlock Text="Foto Lado Izquierdo" FontWeight="SemiBold" 
+                                                  FontSize="16" Margin="0,0,0,5"/>
+                                    <Button Content="Seleccionar Imagen" x:Name="BtnFotoIzquierda" 
+                                                Style="{StaticResource SecondaryButton}" />
+                                </StackPanel>
+                            </Border>
+
+                            <Border Background="#FFF8F9FA" BorderBrush="#FFBDC3C7" 
+                                        BorderThickness="2" CornerRadius="12" Height="150"
+                                        x:Name="BorderFotoDerecha">
+                                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <Border Background="#FF3498DB" Width="50" Height="50" CornerRadius="25" 
+                                                Margin="0,0,0,15">
+                                        <TextBlock Text="📷" FontSize="20" HorizontalAlignment="Center" 
+                                                     VerticalAlignment="Center" Foreground="White"/>
+                                    </Border>
+                                    <TextBlock Text="Foto Lado Derecho" FontWeight="SemiBold" 
+                                                  FontSize="16" Margin="0,0,0,5"/>
+                                    <Button Content="Seleccionar Imagen" x:Name="BtnFotoDerecha" 
+                                                Style="{StaticResource SecondaryButton}" />
+                                </StackPanel>
+                            </Border>
+                        </UniformGrid>
+                    </StackPanel>
+
+                    <!-- Action Buttons -->
+                    <Border BorderBrush="#FFECF0F1" BorderThickness="0,2,0,0" Padding="0,30,0,0">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                            <Button Content="CANCELAR" Style="{StaticResource StackButton}" 
+                                        Margin="0,0,15,0" x:Name="BtnCancelar" />
+                            <Button Content="GUARDAR TERNERO" Style="{StaticResource StackButton}" 
+                                        x:Name="BtnGuardar" />
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </Border>
+        </ScrollViewer>
+
     </Grid>
 </UserControl>

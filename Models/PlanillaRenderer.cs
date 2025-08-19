@@ -57,8 +57,8 @@ namespace GestorDePlanillas.Model
                 ["HBA"] = new CampoConfig { NombrePropiedad = "hba", Posicion = new Point(1657, 166), TamañoFuente = 52 },
                 ["Chapa"] = new CampoConfig { NombrePropiedad = "chapa", Posicion = new Point(2070, 164), TamañoFuente = 52 },
                 ["Color"] = new CampoConfig { NombrePropiedad = "color", Posicion = new Point(374, 250), TamañoFuente = 52 },
-                ["FechaNacimiento"] = new CampoConfig { NombrePropiedad = "fechaNac", Posicion = new Point(1584, 250), TamañoFuente = 52, Formato = "MMM-yy" },
-                ["Tambo"] = new CampoConfig { NombrePropiedad = "tambo", Posicion = new Point(2100, 248), TamañoFuente = 52 },
+                ["FechaNacimiento"] = new CampoConfig { NombrePropiedad = "fechaNac", Posicion = new Point(1584, 246), TamañoFuente = 52, Formato = "dd-MMM-yy" },
+                ["Tambo"] = new CampoConfig { NombrePropiedad = "tambo", Posicion = new Point(2100, 245), TamañoFuente = 52 },
 
                 // Datos del padre
                 ["PadreRP"] = new CampoConfig { NombrePropiedad = "padreRP", Posicion = new Point(424, 1168), TamañoFuente = 52 },
